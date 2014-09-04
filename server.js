@@ -11,7 +11,13 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get('/', function(req, res) {
-  res.sendFile('./index.html', fileOptions);
+  res.sendFile('index.html', fileOptions);
+});
+
+['error', 'added', 'invalid'].forEach(function(type) {
+  app.get('/email-' + type, function(req, res) {
+    res.sendFile('email-' + type + '.html', fileOptions);
+  });
 });
 
 app.post('/register', function(req, res) {
@@ -19,20 +25,18 @@ app.post('/register', function(req, res) {
       validEmail = /.+\@.+/;
 
   if (!validEmail.test(email)) {
-    res.status(400);
     console.log('400: ', email);
-    res.sendFile("./email-invalid.html", fileOptions);
+    res.redirect(302, "email-invalid");
     return;
   }
 
   fs.appendFile("emails", email + "\n", function(err, data) {
     if (err) {
-      res.status(500);
       console.log('500: ', email, JSON.stringify(err));
-      res.sendFile("./email-error.html", fileOptions);
+      res.redirect(302, "email-error");
       return;
     }
-    res.sendFile("./email-added.html", fileOptions);
+    res.redirect(302, "email-added");
   });
 });
 
