@@ -36,6 +36,7 @@
     }
 
     .deets h1 a, .deets h1 a:visited {
+      outline: none;
       font-family: 'fifteen';
       font-size: 6em;
       margin: 0;
@@ -47,6 +48,35 @@
       font-family: 'jura';
       color: #00FFFF;
     }
+
+    .signup {
+      padding-top: 10px;
+      font-family: 'jura';
+    }
+
+    .inline-input {
+      display: inline-block;
+    }
+
+    .inline-input[type="email"] {
+      font-family: 'jura';
+      outline: none;
+      background-color: black;
+      border: 1px solid #00FF00;
+      font-size: 1em;
+      color: #00FF00;
+    }
+
+    .inline-input[type="submit"] {
+      outline: none;
+      border: 2px solid #00BB00;
+      background-color: #00CC00;
+    }
+
+    .inline-input[type="submit"]:focus {
+      border: 2px solid #00CC00;
+      background-color: #00DD00;
+    }
   </style>
 </head>
 <body>
@@ -57,6 +87,12 @@
       </a></h1>
       <h2>A student hackday in Birmingham</h2>
       <h2>24 hours starting 2014-10-25</h2>
+      <form class="signup" method="POST" action="/register">
+        <label>Get updates
+          <input class="inline-input" size=30 type="email" name="email" placeholder="email">
+          <input class="inline-input" type="submit" value="Register">
+        </label>
+      </form>
     </section>
   </article>
 </body>
