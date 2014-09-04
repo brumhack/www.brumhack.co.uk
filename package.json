@@ -1,0 +1,12 @@
+{
+  "name": "brumhack-mail-grabber",
+  "version": "1.0.0",
+  "description": "Email-collecting component for brumhack site",
+  "main": "server.js",
+  "author": "\"Jack Wearden\" <jack@jackwearden.co.uk>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.7.0",
+    "express": "^4.8.7"
+  }
+}
