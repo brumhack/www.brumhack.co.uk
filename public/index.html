@@ -62,6 +62,14 @@
       color: #00FFFF;
     }
 
+    .tickets, .tickets:hover {
+      color: #00FF00;
+      text-decoration: none;
+      background-color: #002200;
+      font-family: 'fifteen';
+      font-size: 30px;
+    }
+
     .signup {
       padding-top: 10px;
       font-family: 'jura';
@@ -100,6 +108,7 @@
       </a></h1>
       <h2>A student hackday in Birmingham</h2>
       <h2>24 hours in October</h2>
+      <a class="tickets" href="https://www.brumhack.co.uk">Get Tickets</a>
       <form class="signup" method="POST" action="/register">
         <label>Get updates</label>
         <input class="inline-input" size=30 type="email" name="email" placeholder="email" required="required">
