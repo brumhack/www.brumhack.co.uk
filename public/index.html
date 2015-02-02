@@ -61,6 +61,15 @@
       text-decoration: none;
     }
 
+    .deets .ticketslink {
+      outline: none;
+      font-family: 'fifteen';
+      font-size: 3em;
+      margin: 0;
+      color: #00FF00;
+      text-decoration: none;
+    }
+
     .deets h2 {
       font-family: 'consola_monobook';
       font-size: 1.5em;
@@ -71,61 +80,7 @@
     .deets h2 a, .deets h2 a:visited {
       color: #00FF00;
     }
-
-    .signup {
-      padding-top: 10px;
-      font-family: 'consola_monobook';
-    }
-
-    .inline-input {
-      display: inline-block;
-    }
-
-    .inline-input[type="email"] {
-      font-family: 'consola_monobook';
-      font-weight: bold;
-      outline: none;
-      background-color: black;
-      border: 2px solid #00FF00;
-      padding: 3px;
-      font-size: 1em;
-      color: white;
-    }
-
-    .inline-input[type="submit"], .signup-show {
-      font-family: 'consola_monobook';
-      font-weight: bold;
-      outline: none;
-      border: 2px solid #00BB00;
-      height: 2.5em;
-      background-color: #00CC00;
-    }
-
-    .inline-input[type="submit"]:focus, .signup-show:focus {
-      border: 2px solid #00CC00;
-      background-color: #00DD00;
-    }
-
-    .signup {
-      display: none;
-    }
-
-    .signup-show {
-      display: inline-block;
-    }
-
   </style>
-  <noscript>
-    <!-- Apparently this is valid html5. Cool. -->
-    <style>
-     .signup {
-       display: block !important;
-     }
-
-     .signup-show {
-       display: none;
-     }
-    </style>
   </noscript>
 </head>
 <body>
@@ -134,13 +89,7 @@
       <h1><a href="https://www.brumhack.co.uk">BrumHack 2.0</a></h1>
       <h2>A student hackday at University of Birmingham</h2>
       <h2>March 28 &amp; 29</h2>
-      <form id="signup" class="signup" method="POST" action="/register">
-        <label>Get updates</label>
-        <input id="email" class="inline-input" size=30 type="email" name="email" placeholder="email" required="required">
-        <input class="inline-input" type="submit" value="Register">
-      </form>
-      <input id="signup-show" class="signup-show" type="button" value="Get Updates">
-      <h2><a href="https://twitter.com/brumhack">Follow on Twitter</a></h2>
+      <h2 class="ticketslink"><a href="https://brumhack.eventbrite.co.uk">Get Tickets</a></h2>
     </section>
   </article>
   <script>
