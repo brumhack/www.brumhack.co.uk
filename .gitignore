@@ -1,3 +1,5 @@
 node_modules/
 
 emails
+
+*.DS_Store
