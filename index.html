@@ -41,18 +41,28 @@
       color: #00FFFF;
     }
 
+    a, a:visited {
+      color: #00FF00;
+    }
+
     .brumhack-container {
       margin: 0 auto;
-      padding: 5% 0;
+      padding: 0;
+      max-width: 800px;
+      font-family: 'consola_monobook';
     }
 
-    .brumhack-container .deets {
+    .deets .banner {
+      margin-top: 30vh;
+    }
+
+    .banner {
       text-align: center;
       color: #00FF00;
-      padding: 10% 0;
+      height: 65vh;
     }
 
-    .deets h1 a, .deets h1 a:visited {
+    .banner h1 a, .banner h1 a:visited {
       outline: none;
       font-family: 'fifteen';
       font-size: 6em;
@@ -61,24 +71,68 @@
       text-decoration: none;
     }
 
-    .deets .ticketslink {
-      outline: none;
-      font-family: 'fifteen';
-      font-size: 3em;
-      margin: 0;
-      color: #00FF00;
-      text-decoration: none;
-    }
-
-    .deets h2 {
+    .banner h2 {
       font-family: 'consola_monobook';
       font-size: 1.5em;
-      font-weight: thin;
+      font-weight: lighter;
       color: #00FFFF;
     }
 
-    .deets h2 a, .deets h2 a:visited {
+    .morelink {
+      text-align: center;
+    }
+
+    .ticketslink, .ticketslink:visited {
+      outline: none;
+      font-family: 'fifteen';
+      font-size: 2em;
+      margin: 0;
       color: #00FF00;
+      text-decoration: underline;
+    }
+
+    .whatis {
+      margin-top: 25%;
+    }
+
+    .whatis h1 {
+      font-size: 5em;
+      font-family: 'fifteen';
+      color: #00FF00;
+      text-align: center;
+      margin: 40px;
+    }
+
+    .whatis dl {
+      background-color: #222;
+      padding: 20px;
+    }
+
+    .whatis dt {
+      margin: 10px auto;
+      color: #DDD;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .whatis dd {
+      margin-bottom: 30px;
+      color: #DDD;
+    }
+
+    address, address a, address a:visited {
+      text-decoration: none;
+      color: #00FF00;
+      font-family: 'fifteen';
+      font-weight: lighter;
+      display: inline;
+      font-size: 1.3em;
+      font-style: normal;
+    }
+
+    .brumhack-container footer {
+      text-align: center;
+      margin-bottom: 50px;
     }
   </style>
   </noscript>
@@ -86,11 +140,56 @@
 <body>
   <article class="brumhack-container">
     <section class="deets">
-      <h1><a href="https://www.brumhack.co.uk">BrumHack 2.0</a></h1>
-      <h2>A student hackday at University of Birmingham</h2>
-      <h2>March 28 &amp; 29</h2>
-      <h2 class="ticketslink"><a href="https://brumhack.eventbrite.co.uk">Get Tickets</a></h2>
+      <div class="banner">
+        <h1><a href="https://www.brumhack.co.uk">BrumHack 2.0</a></h1>
+        <h2>A student hackday at University of Birmingham</h2>
+        <h2>March 28 &amp; 29</h2>
+        <h2><a class="ticketslink" href="https://brumhack.eventbrite.co.uk">Get Tickets</a></h2>
+      </div>
+      <footer class="morelink"><small>More &#x25BE;</small></footer>
     </section>
+
+    <section class="whatis">
+      <h1>FAQs</h1>
+      <dl>
+        <dt>BrumWhat?</dt>
+        <dd>Welcome to BrumHack, a 24 hour hackathon at the University of Birmingham, part of the MLH Spring Season. BrumHack 2.0 will be on 28th-29th March 2015, and will see teams of university students come together to build awesome, interesting, useful (and sometimes hilariously silly) things. There'll be plenty of food and drink to keep you going over the 24 hours, plus some games and activities to get involved with should you wish to take a break. Our fantastic sponsors make this event happen, and provide loads of cool prizes that we're sure you'll want to get your hands on.</dd>
+
+        <dt>Where is it?</dt>
+        <dd><a href="https://www.google.co.uk/maps/place/School+of+Computer+Science+(Y9)/@52.45021,-1.935841,17z/data=!3m1!4b1!4m2!3m1!1s0x4870bdc98e5a447f:0x927048e0e8991f65?hl=en">School of Computer Science, University of Birmingham</a>.
+          You can get here easily by train (“University Station” is on campus), or see more directions <a href="http://www.birmingham.ac.uk/contact/directions/getting-here-edgbaston.aspx">here</a></dd>
+
+        <dt>When is it?</dt>
+        <dd>28th-29th March 2015, 10:30-15:00 ish. The hack is Midday Saturday til Midday Sunday.<dd>
+
+        <dt>Do I have to come in a team?</dt>
+        <dd>Nope! You are welcome to hack with friends of course, but there’ll be plenty of others coming as individuals. There’ll also be chance at the beginning of the event to form teams.</dd>
+
+        <dt>Can my friend/sibling/other human/pet iguana come along?</dt>
+        <dd>To come to BrumHack, you need to be over 18 and a university student (you have to bring your ID card along). Are they these two things? If so, get them to sign up! Simple as that.</dd>
+
+        <dt>Do I have to be a programmer to come?</dt>
+        <dd>Not at all. Obviously you might be able to get started quicker if you think in code instead of English - but it’s not about who can build something fastest! We’re looking for great ideas, hacks that have great design or solve a problem. BrumHack is a friendly, collaborative atmosphere; "Happy hacking" is our ethos, and all skillsets are welcome. So if you’re a designer, artist or are otherwise interested - don’t be put off by the idea of coding, anyone can come.</dd>
+
+        <dt>I’ve never been to a hackathon before, can I come?</dt>
+        <dd>YES! First-time hackers are welcome to join. You don’t need to have a team, an idea or sky-high confidence in your skills; come along, join a team and we’ll promise you’ll learn a tonne before you leave.</dd>
+
+        <dt>What if I want to sleep instead of survive on energy drinks?</dt>
+        <dd>You are (of course) welcome to sleep if you want to. We have a few sofas and chairs you can crash on, or if you're ultra-prepared, bring along a sleeping bag and go crazy! If you're more of a "proper bed" type, get in touch and we can recommend some local places to stay.</dd>
+
+        <dt>I have allergies/dietary requirements... please don't kill me!<dt>
+        <dd>Just let us know and we'll do our best to make sure that there's suitable food and drink for you.</dd>
+
+        <dt>How big can my team be?</dt>
+        <dd>Technically, as big as you like. Any bigger than 4 people though, and you won't be eligible for prizes. So ideally, teams of 1-4 if you want a shot at our fabulous prizes.</dd>
+
+        <dt>Got a question that hasn't been answered?</dt>
+        <dd>Email us at <address><a href="mailto:hello@brumhack.co.uk">hello@brumhack.co.uk</a></address></dd>
+      </dl>
+    </section>
+    <footer>
+      <small><a class="ticketslink" href="https://brumhack.eventbrite.co.uk">Get Tickets</a></small>
+    </footer>
   </article>
   <script>
     (function () {
