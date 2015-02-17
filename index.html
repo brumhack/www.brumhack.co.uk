@@ -100,6 +100,13 @@
 
     .morelink {
       text-align: center;
+      margin-bottom: 50px;
+    }
+
+    @media (max-height: 400px) {
+      .morelink {
+        display: none;
+      }
     }
 
     .ticketslink, .ticketslink:visited {
@@ -150,15 +157,9 @@
       font-style: normal;
     }
 
-    .morelink {
+    .pagefooter {
       text-align: center;
-      margin-bottom: 50px;
-    }
-
-    @media (max-height: 400px) {
-      .morelink {
-        display: none;
-      }
+      margin-bottom: 20px;
     }
   </style>
   </noscript>
@@ -213,7 +214,7 @@
         <dd>Email us at <address><a href="mailto:hello@brumhack.co.uk">hello@brumhack.co.uk</a></address></dd>
       </dl>
     </section>
-    <footer>
+    <footer class="pagefooter">
       <small><a class="ticketslink" href="https://brumhack.eventbrite.co.uk">Get Tickets</a></small>
     </footer>
   </article>
