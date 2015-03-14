@@ -159,6 +159,46 @@
       margin: 40px;
     }
 
+    .sponsors ul {
+      padding: 0;
+      list-style: none;
+      width: 100%;
+    }
+
+    .sponsors li {
+      text-align: center;
+    }
+
+    .sponsors img {
+      display: inline-block;
+      width: 300px;
+    }
+
+    @media (min-width: 550px) {
+      .sponsors .gold img {
+        width: 600px;
+      }
+    }
+
+    .sponsors .season {
+      width: 250px;
+      padding: 20px;
+      margin: 0 auto;
+      background: white;
+    }
+
+    .sponsors .season img {
+      width: 200px;
+    }
+
+    .sponsors .tier h2 {
+      font-size: 2em;
+      font-family: 'fifteen';
+      color: #00FF00;
+      text-align: center;
+      margin: 40px;
+    }
+
     .sponsors div {
       background-color: #222;
       padding: 20px;
@@ -237,8 +277,17 @@
     <section class="sponsors">
       <h1>Sponsors</h1>
       <div>
-        <p>Sponsors are to be announced shortly, but if you’d like to join the lineup we’d love to talk!</p>
-        <p>You’ll find us at <a href="mailto:hello@brumhack.co.uk">hello@brumhack.co.uk</a></p>
+        <ul>
+          <li class="tier"><h2>Gold</h2></li>
+          <li class="gold"><a href="https://majestic.com/"><img src="logos/majestic.png" width="600" alt="Majestic"></a></li>
+          <li class="tier"><h2>Silver</h2></li>
+          <li class="silver"><a href="https://www.esri.com/"><img src="logos/esri.png" alt="Esri"></a></li>
+          <li class="tier"><h2>Bronze</h2></li>
+          <li class="bronze"><a href="http://www.talis.com/"><img src="logos/talis.png" alt="Talis"></a></li>
+          <li class="tier"><h2>MLH Spring Season Sponsors</h2></li>
+          <li class="season"><a href="https://mlh.io/"><img src="logos/mlh.png"></a></li>
+          <li class="season"><a href="https://www.bloomberg.com/"><img src="logos/bloomberg.png"></a></li>
+      </ul>
       </div>
     </section>
     <footer class="pagefooter">
