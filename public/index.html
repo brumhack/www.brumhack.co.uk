@@ -118,6 +118,76 @@
       text-decoration: underline;
     }
 
+    .whoarewe h1 {
+      font-size: 5em;
+      font-family: 'fifteen';
+      color: #00FF00;
+      text-align: center;
+      margin: 40px;
+    }
+
+    .whoarewe ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .whoarewe li {
+      text-align: center;
+      color: white;
+      background-color: #222;
+      padding: 5px;
+      margin: 5px auto;
+      max-width: 250px;
+    }
+
+    .whoarewe h4 {
+      font-size: 1.2em;
+    }
+
+    .whoarewe a, .whoarewe a:visited {
+      color: green;
+    }
+
+    @media (min-width: 750px) {
+      .whoarewe ul {
+        text-align: center;
+      }
+
+      .whoarewe li {
+        width: 30%;
+        height: 300px;
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+
+    .person p {
+      margin: 15px auto;
+      max-width: 150px;
+    }
+
+    .profile-img {
+      margin: 0 auto;
+      height: 100px;
+      width: 100px;
+      border-radius: 50px;
+      -moz-border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -khtml-border-radius: 50px;
+    }
+
+    .joel {
+      background-image: url('profile-joel.jpg');
+    }
+
+    .jack {
+      background-image: url('profile-jack.jpg');
+    }
+
+    .poppie {
+      background-image: url('profile-poppie.jpg');
+    }
+
     .whatis {
       margin-top: 25%;
     }
@@ -234,6 +304,27 @@
         <h2><a class="ticketslink" href="https://brumhack.eventbrite.co.uk">Join Waitlist</a></h2>
       </div>
       <footer class="morelink"><small>More &#x25BE;</small></footer>
+    </section>
+
+    <section class="whoarewe">
+      <h1>Organisers</h1>
+      <ul>
+        <li class="person">
+          <h4><a href="https://twitter.com/JoelHoskin">Joel Hoskin</a></h4>
+          <div class="profile-img joel"></div>
+          <p>3rd Year BSc. Computer Science</p>
+        </li>
+        <li class="person">
+          <h4><a href="https://twitter.com/poppie_simmonds">Poppie Simmonds</a></h4>
+          <div class="profile-img poppie"></div>
+          <p>2nd Year MEng. Computer Science and Software Engineering</p>
+        </li>
+        <li class="person">
+          <h4><a href="https://twitter.com/JackWeirdy">Jack Wearden</a></h4>
+          <div class="profile-img jack"></div>
+          <p>3rd Year BSc. Computer Science with Industrial Placement year</p>
+        </li>
+      </ul>
     </section>
 
     <section class="whatis">
