@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'fifteen';
+    src: url('/fonts/fifteenregular.eot');
+    src: url('/fonts/fifteenregular.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/fifteenregular.woff2') format('woff2'),
+         url('/fonts/fifteenregular.woff') format('woff'),
+         url('/fonts/fifteenregular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h1, h3, p {
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  font-family: 'fifteen';
+}
+
+.toggle-container {
+  text-align: right;
+  padding: 10px;
+}
+
+.btn {
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  background-color: black;
+  cursor: pointer;
+  font-family: 'fifteen';
+  font-size: 20px;
+}
+
+.btn:hover {
+  color: black;
+  background-color: #00ff00;
+}
+
+.btn-updates {
+  padding: 10px;
+}
+
+.btn-sponsors {
+  padding: 5px;
+}
+
+.btn-submit {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+#sponsors, #updates {
+  display: none;
+}
+
+.panel {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #00ff00;
+}
+
+#sponsors:checked ~ .toggle-container .btn-sponsors {
+  background-color: #00ff00;
+  color: black;
+}
+
+#sponsors ~ .sponsor.panel {
+  display: none;
+}
+
+#sponsors:checked ~ .sponsor.panel {
+  display: inherit;
+}
+
+#sponsors:checked ~ .home.panel {
+  display: none;
+}
+
+.home.panel h1 {
+  font-size: 30vw;
+}
+
+.home.panel h3 {
+  font-size: 5vw;
+}
+
+.sponsor.panel h1 {
+  font-size: 10vw;
+}
+
+.sponsor.panel h3 {
+  font-size: 20px;
+}
+
+@media (min-width: 600px) {
+  .home.panel h1 {
+    font-size: 200px;
+  }
+
+  .home.panel h3 {
+    font-size: 30px;
+  }
+
+  .sponsor.panel h1 {
+    font-size: 60px;
+  }
+}
+
+.pre-reg {
+  box-sizing: border-box;
+  padding: 20px;
+  height: 100px;
+}
+
+#updates:checked ~ .btn-updates {
+  display: none;
+}
+
+#updates ~ .form-updates {
+  display: none;
+}
+
+#updates:checked ~ .form-updates {
+  display: block;
+}
+
+.label-retro {
+  display: block;
+  font-size: 20px;
+}
+
+.input-retro {
+  background: black;
+  font-family: 'fifteen';
+  color: #00ff00;
+  border: 0;
+  font-size: 20px;
+}
+
+.input-retro:focus {
+  outline: 0;
+}
+
+.input-retro::selection {
+  background: #00ff00;
+  color: black;
+}
+
+.center {
+  text-align: center;
+}
