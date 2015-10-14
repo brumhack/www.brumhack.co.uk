@@ -70,8 +70,7 @@ body {
 }
 
 .sponsor.panel {
-  min-height: 400px;
-  height: 120vh;
+  min-height: 120vh;
 }
 
 .sponsor.panel h1 {
@@ -97,7 +96,6 @@ body {
 }
 
 ul.sponsor-logos {
-  display: flex;
   padding: 0;
   margin-left: 0;
   margin-right: 0;
@@ -110,18 +108,26 @@ ul.sponsor-logos li {
   padding: 0;
   margin: 0;
   list-style: none;
+
 }
 
 ul.sponsor-logos a {
   margin:0;
+
+}
+
+.clarifai.logo {
+  max-width: 60vw;
 }
 
 .logo {
   max-width: 20vw;
   max-height: 30vh;
+  text-align: center;
   width: auto;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 footer {
