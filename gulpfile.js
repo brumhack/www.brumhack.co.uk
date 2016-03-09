@@ -21,13 +21,16 @@ gulp.task('default', function () {
       base: 'src/',
       js: uglify(),
       css: cssChain(),
-      disabledTypes: ['svg', 'img', 'js'] // Only inline css files
+      disabledTypes: ['svg', 'img', 'js', 'css']
     }))
     .pipe(minifyHTML())
     .pipe(gulp.dest('public/'));
 
   gulp.src('src/fonts/*')
     .pipe(gulp.dest('public/fonts/'));
+
+  gulp.src('src/css/*')
+    .pipe(gulp.dest('public/css/'));
 
   gulp.src('src/img/*')
     .pipe(gulp.dest('public/img/'));
