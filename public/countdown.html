@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Countdown 4.0 - BrumHack</title>
+    <meta name="description" content="BrumHack 4.0 Countdown">
+    <meta name="author" content="BrumHack">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'fifteen';
+            src: url('/fonts/fifteenregular.eot');
+            src: url('/fonts/fifteenregular.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/fifteenregular.woff2') format('woff2'),
+            url('/fonts/fifteenregular.woff') format('woff'),
+            url('/fonts/fifteenregular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            color: #00ff00;
+            display: table;
+        }
+
+        .container {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .content {
+            text-align: center;
+            display: inline-block;
+        }
+
+        #countdown {
+            font-family: 'fifteen', monospace;
+            font-size: 144px;
+            margin-bottom: 40px;
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div id="countdown"></div>
+        </div>
+    </div>
+    <script>
+        // Quick/easy import from: https://stackoverflow.com/questions/9335140/how-to-countdown-to-a-date
+        var end = new Date(2016, 3, 13, 12);
+
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+
+                clearInterval(timer);
+                document.getElementById('countdown').innerHTML = 'STOP HACKING!';
+
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            document.getElementById('countdown').innerHTML = '';
+            document.getElementById('countdown').innerHTML += hours + 'hrs ';
+            document.getElementById('countdown').innerHTML += minutes + 'mins ';
+            document.getElementById('countdown').innerHTML += seconds + 'secs';
+        }
+
+        timer = setInterval(showRemaining, 1000);
+    </script>
+</body>
+</html>
+
